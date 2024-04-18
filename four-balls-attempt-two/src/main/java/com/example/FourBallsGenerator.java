@@ -10,7 +10,7 @@ public class FourBallsGenerator extends PApplet {
     private static final int WINDOW_HEIGHT = 720;
     public static final int BALL_DIAMETER = 10;
     public static final int TOTAL_NO_OF_BALLS = 4;
-    public static List<Ball> balls;
+    public List<Ball> balls;
 
     public static void main(String[] args) {
         PApplet.main(FourBallsGenerator.class, args);
@@ -24,6 +24,10 @@ public class FourBallsGenerator extends PApplet {
 
     @Override
     public void setup() {
+        initialiseBalls();
+    }
+
+    private void initialiseBalls() {
         balls = new ArrayList<>();
         for(int ballNo = 1; ballNo<= TOTAL_NO_OF_BALLS; ballNo++) {
             int positionY = (WINDOW_HEIGHT * ballNo) / (TOTAL_NO_OF_BALLS+1);
