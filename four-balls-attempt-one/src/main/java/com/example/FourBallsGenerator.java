@@ -22,12 +22,16 @@ public class FourBallsGenerator extends PApplet {
 
     @Override
     public void draw() {
+        drawAllTheBalls();
+        absolutePositionX++;
+    }
+
+    private void drawAllTheBalls() {
         for (int ballNo = 1; ballNo <= TOTAL_NO_OF_BALLS; ballNo++) {
             int relativePositionX = absolutePositionX * ballNo;
             int relativePositionY = (WINDOW_HEIGHT * ballNo) / (TOTAL_NO_OF_BALLS + 1);
             drawBall(relativePositionX, relativePositionY, BALL_DIAMETER);
         }
-        absolutePositionX++;
     }
 
     private void drawBall(int positionX, int positionY, int diameter) {
