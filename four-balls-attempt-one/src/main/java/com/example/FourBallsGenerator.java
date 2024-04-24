@@ -4,15 +4,11 @@ import processing.core.PApplet;
 
 public class FourBallsGenerator extends PApplet {
 
-    public static final int WINDOW_WIDTH = 1080;
-    public static final int WINDOW_HEIGHT = 720;
-    public static final int BALL_DIAMETER = 10;
-    public static final int TOTAL_NO_OF_BALLS = 4;
+    private static final int WINDOW_WIDTH = 1080;
+    private static final int WINDOW_HEIGHT = 720;
+    private static final int BALL_DIAMETER = 10;
+    private static final int TOTAL_NO_OF_BALLS = 4;
     int absolutePositionX = 0;
-
-    public static void main(String[] args) {
-        PApplet.main(FourBallsGenerator.class, args);
-    }
 
     @Override
     public void settings() {
@@ -36,5 +32,9 @@ public class FourBallsGenerator extends PApplet {
 
     private void drawBall(int positionX, int positionY, int diameter) {
         ellipse(positionX, positionY, diameter, diameter);
+    }
+
+    public static void main(String[] args) {
+        PApplet.main(FourBallsGenerator.class, args);
     }
 }
